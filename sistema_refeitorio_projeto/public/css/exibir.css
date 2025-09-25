@@ -1,0 +1,149 @@
+/* registro_itens.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+    --primary-color: #2E7D32;
+    --secondary-color: #a8a8a8;
+    --accent-color: #FFC107;
+    --dark-bg: #1d5020;
+    --light-bg: #F5F5F5;
+    --text-dark: #212121;
+    --text-light: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.1s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--light-bg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+}
+
+/* Container principal */
+body > div {
+    background: var(--text-light);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Título da página */
+h2 {
+    font-weight: 500;
+    font-size: 1.8em;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+/* Tabela */
+.table-style {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow-x: auto;
+}
+
+.table-style thead th {
+    background: linear-gradient(135deg, var(--primary-color), #1B5E20);
+    color: var(--text-light);
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.table-style tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eeeeee;
+    color: var(--text-dark);
+}
+
+.table-style tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-style tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Botões de ação na tabela */
+.btn-atz {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: #e0e0e0;
+    color: var(--text-dark);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+    font-size: 0.95em;
+}
+
+.btn-atz:hover {
+    background: #ccc;
+    transform: scale(1.05);
+}
+
+/* Botão Voltar */
+button[type="submit"]:not(.btn-atz) {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:not(.btn-atz):hover {
+    filter: brightness(0.95);
+    transform: translateY(-2px);
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end; /* empurra os itens para a direita */
+    gap: 10px; /* espaço entre os botões */
+    margin-top: 15px; /* espaçamento do formulário */
+}
+/* Link como botão */
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 20px;
+    background-color: var(--secondary-color); /* cor igual ao botão cancelar do cadastro */
+    color: var(--text-light);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.1s ease;
+}
+
+.btn-link:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+}
+
+.btn-link i {
+    font-size: 1.1em;
+}
